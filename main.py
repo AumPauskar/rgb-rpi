@@ -17,18 +17,24 @@ GPIO.setup(gpio_red, GPIO.OUT)
 GPIO.setup(gpio_green, GPIO.OUT)
 GPIO.setup(gpio_blue, GPIO.OUT)
 
-# Turn on the GPIO pins
-GPIO.output(gpio_red, GPIO.HIGH)
-GPIO.output(gpio_green, GPIO.HIGH)
-GPIO.output(gpio_blue, GPIO.HIGH)
+for i in range(30):
+	# Turn on the GPIO pins
+	GPIO.output(gpio_red, GPIO.HIGH)
+	GPIO.output(gpio_green, GPIO.HIGH)
+	GPIO.output(gpio_blue, GPIO.HIGH)
+	print("LEDs on")
 
-# Wait for 1 second
-time.sleep(1)
+	# Wait for 1 second
+	time.sleep(1)
 
-# Turn off the GPIO pins
-GPIO.output(gpio_red, GPIO.LOW)
-GPIO.output(gpio_green, GPIO.LOW)
-GPIO.output(gpio_blue, GPIO.LOW)
+	# Turn off the GPIO pins
+	GPIO.output(gpio_red, GPIO.LOW)
+	GPIO.output(gpio_green, GPIO.LOW)
+	GPIO.output(gpio_blue, GPIO.LOW)
+	print("LEDs off")
+
+	# Wait for 1 second
+	time.sleep(1)
 
 # Clean up GPIO
 GPIO.cleanup()
