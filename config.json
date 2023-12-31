@@ -1,0 +1,5 @@
+{
+	"gpio-red": 11,
+	"gpio-green": 13,
+	"gpio-blue": 15
+}
